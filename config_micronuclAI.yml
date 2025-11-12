@@ -1,0 +1,19 @@
+singularity.runOptions = '-B "$HOME" -C -H "$PWD"'
+report.overwrite = true
+
+executor {
+        queueSize = 20
+}
+
+process{
+  executor = 'slurm'
+  queue    = 'cpu-single'
+ 
+  withName:'micronuclAI_nf' {
+    cpus     = 4
+    time     = '3h'
+    memory   = '32GB'
+  }
+
+}
+
