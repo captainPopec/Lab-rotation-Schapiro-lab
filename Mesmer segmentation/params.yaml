@@ -1,0 +1,5 @@
+workflow:
+  segmentation: mesmer
+options:
+  mesmer: --image-mpp 0.49 --nuclear-channel 0
+
